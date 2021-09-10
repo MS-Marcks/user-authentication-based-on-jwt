@@ -20,7 +20,6 @@ app.get('/', (req, res) => {
 app.use('/public', RoutePublic.RoutePublic);
 app.use('/private', RoutePrivate.RoutePrivate);
 
-
 app.listen(3000, () => {
     console.log('http://localhost:3000/')
 })

@@ -1,0 +1,27 @@
+ <div class="container" style="z-index: 1;">
+  <div class="row align-items-center justify-content-center" style="height: 100vh;">
+    <div>
+      <div class="card" style="width: 20rem;">
+        <div class="card-body">
+          <form class="form-signin" #f="ngForm" (ngSubmit)="onSubmit()">
+            <div class="text-center">
+              <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesion</h1>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="USUARIO" name="username"
+                [(ngModel)]="session.username" />
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="CLAVE" name="password"
+                [(ngModel)]="session.password" />
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesion</button>
+            <div class="text-center">
+              <p class="mt-5 mb-3 text-muted">&copy; MS-Magic System (2017-2021)</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

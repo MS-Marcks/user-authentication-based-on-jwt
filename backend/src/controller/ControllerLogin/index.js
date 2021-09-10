@@ -6,9 +6,10 @@ if (process.env.NODE_ENV !== 'production') {
     require("dotenv").config()
 }
 
-ControllerLogin.get('/', (req, res) => {
-    const token = jwt.sign({ foo: 'bar' }, process.env.TOKEN_HASH);
-    res.json(token);
+ControllerLogin.post('/', (req, res) => {
+    const body = req.body;
+    const token = jwt.sign(body, process.env.TOKEN_HASH);
+    res.json({ code: 200, message: { token } });
 })
 
 exports.ControllerLogin = ControllerLogin;
